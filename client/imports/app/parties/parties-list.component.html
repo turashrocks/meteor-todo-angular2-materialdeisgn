@@ -1,0 +1,22 @@
+<parties-form [hidden]="!user"></parties-form>
+
+  <div class="parties-list-container">
+  <div class="parties-list">
+    <md-card *ngFor="let party of parties | async" class="party-card">
+      <h2 class="party-name">
+        <a [routerLink]="['/party', party._id]">{{party.name}}</a>
+      </h2>
+      {{party.description}}
+      <br />
+      {{party.location}}
+      <button class="remove-party" md-icon-button *ngIf="isOwner(party)" (click)="removeParty(party)">
+        <md-icon class="md-24">X</md-icon>
+      </button>
+      </div>
+    </md-card>
+  </div>
+</div>
+
+
+  
+

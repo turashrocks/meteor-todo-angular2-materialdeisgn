@@ -1,0 +1,49 @@
+<!--<div>
+<form *ngIf="party" (submit)="saveParty()" [hidden]="!isOwner">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="party.name" name="name">
+  
+    <label>Description</label>
+    <input type="text" [(ngModel)]="party.description" name="description">
+  
+    <label>Location</label>
+    <input type="text" [(ngModel)]="party.location" name="location">
+  
+    <button type="submit">Save</button>
+    <a [routerLink]="['/']">Cancel</a>
+</form>
+</div>
+<a [routerLink]="['/']">Back</a>
+
+<header *ngIf="party">
+  <h2>{{party.name}}</h2>
+ 
+  <p>{{party.description}}</p>
+ 
+  <p>{{party.location}}</p>
+</header>-->
+
+<div class="party-details-container" *ngIf="party">
+  <div class="row">
+    <div class="party-details">
+      <md-card>
+        <h2>{{ party.name }}</h2>
+        <form layout="column" (submit)="saveParty()">
+          <label>Party Name: </label>
+          <md-input [disabled]="!isOwner" [(ngModel)]="party.name" name="name"></md-input>
+          <br />
+          <label>Party Description: </label>
+          <md-input [disabled]="!isOwner" [(ngModel)]="party.description" name="description"></md-input>
+          <br />
+          <label>Location name: </label>
+          <md-input [disabled]="!isOwner" [(ngModel)]="party.location" name="location"></md-input>
+          <br />
+          <div layout="row" layout-align="left">
+            <button [disabled]="!isOwner" type="submit" md-raised-button color="accent">Save</button>
+            <a [routerLink]="['/']" md-raised-button class="md-raised">Back</a>
+          </div>
+        </form>
+      </md-card>
+    </div>
+  </div>
+</div>

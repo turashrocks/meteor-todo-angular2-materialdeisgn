@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "sourceMap": false,
+    "noEmitHelpers": true,
+    "declaration": true,
+    "outDir": "./build",
+    "rootDir": "./src"
+  },
+  "files": [
+    "typings.d.ts",
+    "src/index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
