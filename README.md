@@ -2,3 +2,4 @@
 
 clone the repo and type 'meteor' from command line
 
+Especial Thanks to Urigo
